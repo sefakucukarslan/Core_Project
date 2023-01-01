@@ -15,7 +15,7 @@ namespace BusinessLayer.Concrete
             _featureDal = featureDal;
         }
 
-        public Feature GetByID(int id)
+        public Feature TGetByID(int id)
         {
             return _featureDal.GetByID(id);
         }

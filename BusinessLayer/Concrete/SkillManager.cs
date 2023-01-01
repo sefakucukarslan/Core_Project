@@ -15,19 +15,19 @@ namespace BusinessLayer.Concrete
             _skillDal = skillDal;
         }
 
-        public Skill GetByID(int id)
+        public Skill TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _skillDal.GetByID(id);
         }
 
         public void TAdd(Skill entity)
         {
-            throw new NotImplementedException();
+            _skillDal.Insert(entity);
         }
 
         public void TDelete(Skill entity)
         {
-            throw new NotImplementedException();
+            _skillDal.Delete(entity);
         }
 
         public List<Skill> TGetList()
@@ -37,7 +37,7 @@ namespace BusinessLayer.Concrete
 
         public void TUpdate(Skill entity)
         {
-            throw new NotImplementedException();
+            _skillDal.Update(entity);
         }
     }
 }

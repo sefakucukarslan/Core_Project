@@ -14,19 +14,19 @@ namespace BusinessLayer.Concrete
             _serviceDal = serviceDal;
         }
 
-        public Service GetByID(int id)
+        public Service TGetByID(int id)
         {
-            throw new System.NotImplementedException();
+            return _serviceDal.GetByID(id);
         }
 
         public void TAdd(Service entity)
         {
-            throw new System.NotImplementedException();
+            _serviceDal.Insert(entity);
         }
 
         public void TDelete(Service entity)
         {
-            throw new System.NotImplementedException();
+            _serviceDal.Delete(entity);
         }
 
         public List<Service> TGetList()
@@ -36,7 +36,7 @@ namespace BusinessLayer.Concrete
 
         public void TUpdate(Service entity)
         {
-            throw new System.NotImplementedException();
+            _serviceDal.Update(entity);
         }
     }
 }
