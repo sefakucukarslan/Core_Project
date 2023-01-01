@@ -8,7 +8,9 @@ namespace Core_Project.ViewComponents.Dashboard
 {
     public class MessageList : ViewComponent
     {
+        //UserMessageManager messageManager = new UserMessageManager(new EfUserMessageDal());
         MessageManager messageManager = new MessageManager(new EfMessageDal());
+
         public IViewComponentResult Invoke()
         {
             var values = messageManager.TGetList().Take(5).ToList();
