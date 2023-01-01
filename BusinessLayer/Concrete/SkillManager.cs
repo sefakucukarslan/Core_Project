@@ -39,5 +39,10 @@ namespace BusinessLayer.Concrete
         {
             _skillDal.Update(entity);
         }
+
+        public List<Skill> TGetListbyFilter()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -38,5 +38,10 @@ namespace BusinessLayer.Concrete
         {
             _serviceDal.Update(entity);
         }
+
+        public List<Service> TGetListbyFilter()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

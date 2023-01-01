@@ -1,7 +1,9 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace DataAccessLayer.Repository
 {
@@ -12,6 +14,12 @@ namespace DataAccessLayer.Repository
             using var c = new Context();
             c.Remove(entity);
             c.SaveChanges();
+        }
+
+        public List<T> GetbyFilter(Expression<Func<T, bool>> filter)
+        {
+            using var c = new Context();
+            return c.Set<T>().Where(filter).ToList();
         }
 
         public T GetByID(int id)

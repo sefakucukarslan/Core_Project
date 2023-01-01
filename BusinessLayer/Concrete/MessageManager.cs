@@ -38,5 +38,10 @@ namespace BusinessLayer.Concrete
         {
             _messageDal.Update(entity);
         }
+
+        public List<Message> TGetListbyFilter()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
