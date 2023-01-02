@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Core_Project.Controllers
 {
