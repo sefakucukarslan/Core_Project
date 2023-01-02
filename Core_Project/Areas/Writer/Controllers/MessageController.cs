@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 namespace Core_Project.Areas.Writer.Controllers
 {
     [Area("Writer")]
+    [Route("Writer/Message")]
     public class MessageController : Controller
     {
         WriterMessageManager writerMessageManager = new WriterMessageManager(new EfWriterMessageDal());
